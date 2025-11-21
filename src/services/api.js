@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-// Configuración automática para producción/desarrollo
-const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://tu-backend-en-render.com/api'  // Actualizar después con tu backend en producción
-  : 'http://localhost:5000/api';
+// Para desarrollo local y GitHub Pages
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:5000/api'
+  : 'https://gametracker-backend.onrender.com/api'; // Usaremos Render para el backend
 
 const api = axios.create({
   baseURL: API_BASE_URL,
