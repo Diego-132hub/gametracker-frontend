@@ -1,0 +1,488 @@
+.estadisticas {
+  padding: 1rem 0;
+}
+
+.estadisticas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-info h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-info p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+/* Tarjetas de Resumen */
+.resumen-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resumen-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.resumen-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card-icon.total {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.card-icon.completados {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.card-icon.horas {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card-icon.jugando {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.card-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.card-content p {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Grid de Estadísticas */
+.estadisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.estadistica-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.estadistica-card.destacado {
+  border: 2px solid #f59e0b;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+
+.estadistica-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Barras de Estado */
+.estado-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.estado-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.bar-container {
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+.bar-fill.completado {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.bar-fill.jugando {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.bar-fill.por-jugar {
+  background: linear-gradient(90deg, #6b7280, #9ca3af);
+}
+
+/* Lista de Géneros */
+.generos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.genero-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.genero-info {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 120px;
+}
+
+.genero-nombre {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.genero-count {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+.genero-bar-container {
+  flex: 2;
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.genero-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+  border-radius: 3px;
+  transition: width 1s ease-in-out;
+}
+
+.genero-porcentaje {
+  min-width: 40px;
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.mas-generos {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  background: var(--bg-color);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Juego Destacado */
+.juego-destacado {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.juego-portada {
+  width: 80px;
+  height: 100px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.juego-portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.juego-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+.juego-info p {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.juego-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  background: var(--bg-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Estadísticas de Reseñas */
+.reseñas-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.reseña-stat {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 0.5rem;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mejor-calificados {
+  margin-top: 1.5rem;
+}
+
+.mejor-calificados h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.top-juego {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--bg-color);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rank {
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.juego-titulo {
+  flex: 1;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.puntuacion-promedio {
+  color: var(--success-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Metas Personales */
+.metas-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.metas-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.metas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.meta-card {
+  padding: 1.5rem;
+  background: var(--bg-color);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.meta-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.meta-progress {
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+.meta-card span {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Estados de carga y sin datos */
+.estadisticas-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 1rem;
+}
+
+.sin-estadisticas {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sin-estadisticas h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.sin-estadisticas p {
+  color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .estadisticas-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .resumen-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .estadisticas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reseñas-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .juego-destacado {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .juego-stats {
+    justify-content: center;
+  }
+  
+  .genero-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .genero-info {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumen-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .metas-grid {
+    grid-template-columns: 1fr;
+  }
+}
