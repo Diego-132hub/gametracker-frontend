@@ -1,0 +1,352 @@
+.lista-reseñas {
+  padding: 1rem 0;
+}
+
+.reseñas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.reseñas-info h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.reseñas-info p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.reseñas-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filtro-juego {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: white;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.filtro-juego:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.reseñas-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reseñas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reseña-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.reseña-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.juego-info {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.juego-portada {
+  width: 60px;
+  height: 80px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.juego-portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portada-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.juego-details {
+  flex: 1;
+}
+
+.juego-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.juego-desarrolladora {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.reseña-meta {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.reseña-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.puntuacion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.puntuacion-numero {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.recomendacion {
+  padding: 0.4rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.recomendacion.recomendado {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.recomendacion.no-recomendado {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.reseña-contenido {
+  padding: 1.5rem;
+}
+
+.reseña-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.reseña-texto {
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  white-space: pre-line;
+}
+
+.reseña-listas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.pros-contras h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.pros-contras ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros-contras li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  position: relative;
+  padding-left: 1rem;
+}
+
+.pros-contras li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.pros-contras:first-child li:before {
+  color: var(--success-color);
+}
+
+.pros-contras:last-child li:before {
+  color: var(--error-color);
+}
+
+.reseña-actions {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.reseña-actions .btn-editar,
+.reseña-actions .btn-eliminar {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-editar {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #1d4ed8;
+}
+
+.btn-eliminar {
+  background: var(--error-color);
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
+}
+
+.reseñas-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 1rem;
+}
+
+.sin-reseñas {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sin-reseñas-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.sin-reseñas h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.sin-reseñas p {
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reseñas-header {
+    flex-direction: column;
+  }
+  
+  .reseñas-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .reseña-header {
+    flex-direction: column;
+  }
+  
+  .reseña-rating {
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .reseña-listas {
+    grid-template-columns: 1fr;
+  }
+  
+  .reseñas-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .juego-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .juego-portada {
+    align-self: center;
+  }
+  
+  .reseña-actions {
+    flex-direction: column;
+  }
+}
