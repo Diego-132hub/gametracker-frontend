@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Para desarrollo local y GitHub Pages
 const API_BASE_URL = window.location.hostname === 'localhost' 
-  ? 'http://localhost:10000/api'
+  ? 'http://localhost:5000/api'
   : 'https://gametracker-backend-8tg9.onrender.com/api'; // Backend en Render
 
 const api = axios.create({
