@@ -3,7 +3,7 @@ import axios from 'axios';
 // Para desarrollo local y GitHub Pages
 const API_BASE_URL = window.location.hostname === 'localhost' 
   ? 'http://localhost:5000/api'
-  : 'https://gametracker-backend-8tg9.onrender.com/api'; // Backend en Render
+  : 'https://gametracker-backend-yr57.onrender.com/api'; // en render
 
 const api = axios.create({
   baseURL: API_BASE_URL,
